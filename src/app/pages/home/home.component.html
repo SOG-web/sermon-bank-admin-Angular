@@ -1,54 +1,59 @@
 <div class="home-container">
   <div class="home-home">
-    <div class="home-frame2">
-      <img
-        alt="Plus25"
-        src="/assets/playground_assets/plus25-mrva-200h.png"
-        class="home-plus"
-      />
-      <span class="home-text"><span>Add Category</span></span>
-    </div>
-    <div class="home-frame3">
-      <img
-        alt="Plus219"
-        src="/assets/playground_assets/plus219-t49m-200h.png"
-        class="home-plus1"
-      />
-      <span class="home-text02"><span>Add Ministers</span></span>
-    </div>
-    <div class="home-frame4">
-      <img
-        alt="Plus225"
-        src="/assets/playground_assets/plus225-u1rc-200h.png"
-        class="home-plus2"
-      />
-      <span class="home-text04"><span>Add Levels</span></span>
-    </div>
-    <div class="home-frame5">
-      <img
-        alt="Plus228"
-        src="/assets/playground_assets/plus228-lqsa-200h.png"
-        class="home-plus3"
-      />
-      <span class="home-text06"><span>Add Banner</span></span>
-    </div>
-    <div class="home-frame1">
-      <img
-        alt="iTunes111"
-        src="/assets/playground_assets/itunes111-v98-200h.png"
-        class="home-i-tunes"
-      />
-      <span class="home-text08"><span>Add New Message</span></span>
-    </div>
-    <div class="home-navbar">
-      <span class="home-text10"><span>Sermon Bank</span></span>
-      <div class="home-frame11">
-        <span class="home-text12"><span>Message</span></span>
-        <span class="home-text14"><span>Category</span></span>
-        <span class="home-text16"><span>Ministry</span></span>
-        <span class="home-text18"><span>Levels</span></span>
-        <span class="home-text20"><span>Banner</span></span>
+    <a transitionTo="/category" class="home-navlink">
+      <div class="home-frame2">
+        <img
+          alt="Plus25"
+          src="/assets/playground_assets/plus25-mrva-200h.png"
+          class="home-plus"
+        />
+        <span class="home-text"><span>Add Category</span></span>
       </div>
-    </div>
+    </a>
+    <a transitionTo="/levels" class="home-navlink1">
+      <div class="home-frame4">
+        <img
+          alt="Plus225"
+          src="/assets/playground_assets/plus225-u1rc-200h.png"
+          class="home-plus1"
+        />
+        <span class="home-text02"><span>Add Levels</span></span>
+      </div>
+    </a>
+    <a transitionTo="/banner" class="home-navlink2">
+      <div class="home-frame5">
+        <img
+          alt="Plus228"
+          src="/assets/playground_assets/plus228-lqsa-200h.png"
+          class="home-plus2"
+        />
+        <span class="home-text04"><span>Add Banner</span></span>
+      </div>
+    </a>
+    <a transitionTo="/message" class="home-navlink3">
+      <div class="home-frame1">
+        <img
+          alt="iTunes111"
+          src="/assets/playground_assets/itunes111-v98-200h.png"
+          class="home-i-tunes"
+        />
+        <span class="home-text06"><span>Add New Message</span></span>
+      </div>
+    </a>
+    <a transitionTo="/ministers" class="home-navlink4">
+      <div class="home-frame3">
+        <img
+          alt="Plus219"
+          src="/assets/playground_assets/plus219-t49m-200h.png"
+          class="home-plus3"
+        />
+        <span class="home-text08"><span>Add Ministers</span></span>
+      </div>
+    </a>
+    <app-header
+      heading="Home"
+      rootClassName="header-root-class-name1"
+    ></app-header>
+    <app-navbar rootClassName="navbar-root-class-name3"></app-navbar>
   </div>
 </div>

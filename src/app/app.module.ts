@@ -22,11 +22,6 @@ const routes = [
       import('./pages/message/message.module').then((m) => m.MessageModule),
   },
   {
-    path: 'navbar',
-    loadChildren: () =>
-      import('./pages/navbar/navbar.module').then((m) => m.NavbarModule),
-  },
-  {
     path: 'category',
     loadChildren: () =>
       import('./pages/category/category.module').then((m) => m.CategoryModule),
@@ -44,9 +39,11 @@ const routes = [
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'ministry',
+    path: 'ministers',
     loadChildren: () =>
-      import('./pages/ministry/ministry.module').then((m) => m.MinistryModule),
+      import('./pages/ministers/ministers.module').then(
+        (m) => m.MinistersModule
+      ),
   },
 ]
 

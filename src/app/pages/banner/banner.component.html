@@ -1,14 +1,39 @@
 <div class="banner-container">
   <div class="banner-banner">
-    <div class="banner-navbar">
-      <span class="banner-text"><span>Sermon Bank</span></span>
-      <div class="banner-frame1">
-        <span class="banner-text02"><span>Message</span></span>
-        <span class="banner-text04"><span>Category</span></span>
-        <span class="banner-text06"><span>Ministry</span></span>
-        <span class="banner-text08"><span>Levels</span></span>
-        <span class="banner-text10"><span>Banner</span></span>
-      </div>
-    </div>
+    <app-navbar rootClassName="navbar-root-class-name5"></app-navbar>
+    <app-header
+      heading="New Banner"
+      rootClassName="header-root-class-name3"
+    ></app-header>
+    <span class="banner-text">Enter Url</span>
+    <span class="banner-text1">Select Image</span>
+    <button
+      id="submit"
+      name="submit"
+      type="submit"
+      class="banner-button button"
+    >
+      <span>
+        <span>Submit</span>
+        <br />
+      </span>
+    </button>
   </div>
+  <input
+    type="text"
+    id="url"
+    name="url"
+    required
+    placeholder="Banner image"
+    class="banner-textinput input"
+  />
+  <input
+    type="file"
+    id="image"
+    name="image"
+    accept="image/*"
+    required
+    placeholder="Banner image"
+    class="banner-textinput1 input"
+  />
 </div>

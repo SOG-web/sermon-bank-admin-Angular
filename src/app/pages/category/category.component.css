@@ -3,6 +3,8 @@
 }
 .category-container {
   min-height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .category-category {
   width: 100%;
@@ -10,127 +12,95 @@
   display: flex;
   overflow: hidden;
   position: relative;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   border-color: transparent;
+  justify-content: flex-start;
   background-color: rgba(255, 255, 255, 1);
 }
-.category-navbar {
-  top: 0px;
-  left: 0px;
-  width: 284px;
-  height: 832px;
+.category-container1 {
+  top: 187px;
+  left: 366px;
+  width: 340px;
+  height: 83.2727279663086px;
   display: flex;
-  padding: 56px 32px;
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: transparent;
-  flex-direction: column;
-  background-color: rgba(48, 60, 102, 1);
+  align-items: center;
+  justify-content: flex-start;
+}
+.category-textinput {
+  top: 36px;
+  left: 2px;
+  width: 338px;
+  position: absolute;
+  font-size: 20px;
 }
 .category-text {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 10px;
-  text-decoration: none;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
 }
-.category-frame1 {
-  height: 360px;
+.category-container2 {
+  top: 188px;
+  right: 145px;
+  width: 308.0000305175781px;
+  height: 78px;
   display: flex;
-  position: relative;
-  margin-top: var(--dl-space-space-twounits);
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: transparent;
-  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: flex-start;
 }
-.category-text02 {
-  color: rgba(255, 255, 255, 1);
-  width: 130px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
+.category-textinput1 {
+  top: 37px;
+  left: 0.54547119140625px;
+  position: absolute;
+  font-size: 20px;
 }
-.category-text04 {
-  color: rgba(239, 212, 71, 1);
-  width: 147px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
+.category-text1 {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
 }
-.category-text06 {
-  color: rgba(255, 255, 255, 1);
-  width: 130px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
+.category-button {
+  top: 522px;
+  left: 699px;
+  width: 125px;
+  height: 46px;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
+  text-align: center;
   font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
+  background-color: #dfd443;
 }
-.category-text08 {
-  color: rgba(255, 255, 255, 1);
-  width: 101px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
+@media(max-width: 991px) {
+  .category-container1 {
+    top: 197px;
+    left: 509px;
+  }
+  .category-container2 {
+    top: 372px;
+    right: 173px;
+    position: absolute;
+  }
+  .category-button {
+    top: 545px;
+    left: 588px;
+  }
 }
-.category-text10 {
-  color: rgba(255, 255, 255, 1);
-  width: 112px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 0;
-  text-decoration: none;
+@media(max-width: 767px) {
+  .category-container1 {
+    top: 216px;
+    right: 39px;
+  }
+  .category-container2 {
+    top: 368px;
+    right: 46px;
+  }
 }

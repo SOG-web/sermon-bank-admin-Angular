@@ -13,124 +13,52 @@
   align-items: flex-start;
   flex-shrink: 0;
   border-color: transparent;
+  justify-content: flex-start;
   background-color: rgba(255, 255, 255, 1);
 }
-.banner-navbar {
-  top: 0px;
-  left: 0px;
-  width: 284px;
-  height: 832px;
-  display: flex;
-  padding: 56px 32px;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: transparent;
-  flex-direction: column;
-  background-color: rgba(48, 60, 102, 1);
-}
 .banner-text {
-  color: rgba(255, 255, 255, 1);
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Bold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 10px;
-  text-decoration: none;
-}
-.banner-frame1 {
-  height: 360px;
-  display: flex;
-  position: relative;
-  margin-top: var(--dl-space-space-twounits);
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: transparent;
-  flex-direction: column;
-}
-.banner-text02 {
-  color: rgba(255, 255, 255, 1);
-  width: 130px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
+  top: 348px;
+  left: 702px;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
 }
-.banner-text04 {
-  color: rgba(255, 255, 255, 1);
-  width: 147px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
+.banner-text1 {
+  top: 206px;
+  left: 701px;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
 }
-.banner-text06 {
-  color: rgba(255, 255, 255, 1);
-  width: 130px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
+.banner-button {
+  top: 522px;
+  left: 699px;
+  width: 125px;
+  height: 46px;
+  position: absolute;
+  font-size: 20px;
+  font-style: normal;
+  text-align: center;
   font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
+  background-color: #dfd443;
 }
-.banner-text08 {
-  color: rgba(255, 255, 255, 1);
-  width: 101px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 20px;
-  text-decoration: none;
+.banner-textinput {
+  top: 393px;
+  left: 621px;
+  width: 271px;
+  position: absolute;
 }
-.banner-text10 {
-  color: rgba(239, 212, 71, 1);
-  width: 112px;
-  height: auto;
-  font-size: 32px;
-  align-self: auto;
-  font-style: Medium;
-  text-align: left;
-  font-family: Sarabun;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  margin-right: 0;
-  margin-bottom: 0;
-  text-decoration: none;
+.banner-textinput1 {
+  top: 251px;
+  left: 620px;
+  width: 271px;
+  position: absolute;
+}
+@media(max-width: 991px) {
+  .banner-button {
+    top: 545px;
+    left: 588px;
+  }
 }

@@ -1,14 +1,58 @@
 <div class="message-container">
   <div class="message-message">
-    <div class="message-navbar">
-      <span class="message-text"><span>Sermon Bank</span></span>
-      <div class="message-frame1">
-        <span class="message-text02"><span>Message</span></span>
-        <span class="message-text04"><span>Category</span></span>
-        <span class="message-text06"><span>Ministry</span></span>
-        <span class="message-text08"><span>Levels</span></span>
-        <span class="message-text10"><span>Banner</span></span>
-      </div>
+    <app-navbar rootClassName="navbar-root-class-name"></app-navbar>
+  </div>
+  <app-header rootClassName="header-root-class-name"></app-header>
+  <div class="message-container1">
+    <div class="message-container2">
+      <select id="category" required class="message-select">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+      <span class="message-text">Select Category</span>
+    </div>
+    <div class="message-container3">
+      <select id="minister" name="minister" required class="message-select1">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+      <span class="message-text1">Select Minister</span>
+    </div>
+    <div class="message-container4">
+      <select required class="message-select2">
+        <option value="Option 1" selected>Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+      <span class="message-text2">Related Messages</span>
     </div>
   </div>
+  <div class="message-container5">
+    <input
+      type="text"
+      id="title"
+      name="title"
+      required
+      placeholder="title"
+      class="message-input input"
+    />
+    <span class="message-text3">Message Title :</span>
+  </div>
+  <div class="message-container6">
+    <input
+      type="file"
+      id="message"
+      name="message"
+      accept="audio/*"
+      required
+      placeholder="message"
+      class="message-input1 input"
+    />
+    <span class="message-text4">Message :</span>
+  </div>
+  <button id="submit" name="submit" type="submit" class="message-button button">
+    Upload
+  </button>
 </div>

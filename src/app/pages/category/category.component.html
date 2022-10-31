@@ -1,14 +1,41 @@
 <div class="category-container">
   <div class="category-category">
-    <div class="category-navbar">
-      <span class="category-text"><span>Sermon Bank</span></span>
-      <div class="category-frame1">
-        <span class="category-text02"><span>Message</span></span>
-        <span class="category-text04"><span>Category</span></span>
-        <span class="category-text06"><span>Ministry</span></span>
-        <span class="category-text08"><span>Levels</span></span>
-        <span class="category-text10"><span>Banner</span></span>
-      </div>
+    <app-navbar rootClassName="navbar-root-class-name4"></app-navbar>
+    <app-header
+      heading="Add Category"
+      rootClassName="header-root-class-name2"
+    ></app-header>
+    <div class="category-container1">
+      <input
+        type="file"
+        accept="image/*"
+        required
+        placeholder="placeholder"
+        class="category-textinput input"
+      />
+      <span class="category-text">Select Image :</span>
     </div>
+    <div class="category-container2">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Category name"
+        class="category-textinput1 input"
+      />
+      <span class="category-text1">Category Name :</span>
+    </div>
+    <button
+      id="submit"
+      name="submit"
+      type="submit"
+      class="category-button button"
+    >
+      <span>
+        <span>Submit</span>
+        <br />
+      </span>
+    </button>
   </div>
 </div>
