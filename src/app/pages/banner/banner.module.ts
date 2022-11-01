@@ -1,20 +1,20 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
-import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-import { ComponentsModule } from '../../components/components.module'
-import { Banner } from './banner.component'
+import { Banner } from './banner.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes = [
   {
     path: '',
     component: Banner,
   },
-]
+];
 
 @NgModule({
   declarations: [Banner],
-  imports: [CommonModule, ComponentsModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
   exports: [Banner],
 })
 export class BannerModule {}

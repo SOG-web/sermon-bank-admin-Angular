@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
-import { CommonModule } from '@angular/common'
+// import { NgModule } from '@angular/core';
+// import { RouterModule } from '@angular/router';
+// import { CommonModule } from '@angular/common';
 
-import { Navbar } from './navbar/navbar.component'
-import { Header } from './header/header.component'
+// import { Navbar } from './navbar/navbar.component';
+// import { Header } from './header/header.component';
+// // import { FormComponent } from './form/form.component';
+// import { SharedModule } from '../shared/shared.module';
+// import { FormComponent } from './form/form.component';
 
-@NgModule({
-  declarations: [Navbar, Header],
-  imports: [CommonModule, RouterModule],
-  exports: [Navbar, Header],
-})
-export class ComponentsModule {}
+// @NgModule({
+//   declarations: [],
+//   imports: [],
+//   exports: [Navbar, Header, FormComponent],
+// })
+// export class ComponentsModule {}

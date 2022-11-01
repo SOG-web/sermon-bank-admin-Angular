@@ -1,0 +1,1 @@
+{"ast":null,"code":"export function EmailValidator(control) {\n  return control.value.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$/);\n}","map":null,"metadata":{},"sourceType":"module"}

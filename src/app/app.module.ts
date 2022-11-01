@@ -1,56 +1,29 @@
-import { NgModule } from '@angular/core'
-import { RouterModule } from '@angular/router'
-import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+// import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
-import { ComponentsModule } from './components/components.module'
-import { AppComponent } from './app.component'
-
-const routes = [
-  {
-    path: 'levels',
-    loadChildren: () =>
-      import('./pages/levels/levels.module').then((m) => m.LevelsModule),
-  },
-  {
-    path: 'banner',
-    loadChildren: () =>
-      import('./pages/banner/banner.module').then((m) => m.BannerModule),
-  },
-  {
-    path: 'message',
-    loadChildren: () =>
-      import('./pages/message/message.module').then((m) => m.MessageModule),
-  },
-  {
-    path: 'category',
-    loadChildren: () =>
-      import('./pages/category/category.module').then((m) => m.CategoryModule),
-  },
-  {
-    path: 'i-phone141',
-    loadChildren: () =>
-      import('./pages/i-phone141/i-phone141.module').then(
-        (m) => m.IPhone141Module
-      ),
-  },
-  {
-    path: '',
-    loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomeModule),
-  },
-  {
-    path: 'ministers',
-    loadChildren: () =>
-      import('./pages/ministers/ministers.module').then(
-        (m) => m.MinistersModule
-      ),
-  },
-]
+import { AppComponent } from './app.component';
+import { AuthService } from './auth.service';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes), ComponentsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    SharedModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
+  ],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

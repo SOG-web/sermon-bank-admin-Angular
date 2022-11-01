@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Form {\n  constructor(fields) {\n    this.fields = fields;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

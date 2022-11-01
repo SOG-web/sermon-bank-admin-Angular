@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sermon-bank": {
+      "hosting": {
+        "teleport-project-template-angular": [
+          "sermon-bank"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sermon-bank"
+  }
+}
