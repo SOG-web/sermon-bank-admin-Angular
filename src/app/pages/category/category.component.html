@@ -1,41 +1,12 @@
 <div class="category-container">
-  <div class="category-category">
-    <app-navbar rootClassName="navbar-root-class-name4"></app-navbar>
-    <app-header
-      heading="Add Category"
-      rootClassName="header-root-class-name2"
-    ></app-header>
-    <div class="category-container1">
-      <input
-        type="file"
-        accept="image/*"
-        required
-        placeholder="placeholder"
-        class="category-textinput input"
-      />
-      <span class="category-text">Select Image :</span>
-    </div>
-    <div class="category-container2">
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-        placeholder="Category name"
-        class="category-textinput1 input"
-      />
-      <span class="category-text1">Category Name :</span>
-    </div>
-    <button
-      id="submit"
-      name="submit"
-      type="submit"
-      class="category-button button"
-    >
-      <span>
-        <span>Submit</span>
-        <br />
-      </span>
-    </button>
-  </div>
+  <app-header
+    heading="Add Category"
+    rootClassName="header-root-class-name2 mt-4"
+  ></app-header>
+  <app-form
+    class="form"
+    [formAttributes]="formAttributes"
+    (submitted)="submit($event)"
+  >
+  </app-form>
 </div>

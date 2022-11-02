@@ -6,10 +6,11 @@ export class Login {
   public static getLoginFormConfig(): FormlyFieldConfig[] {
     return [
       {
-        className: 'input-email',
+        // className: 'input-email',
         focus: true,
         key: 'email',
-        templateOptions: {
+        props: {
+          label: 'Email',
           placeholder: 'you@company.com',
           required: true,
           type: 'email',
@@ -28,9 +29,10 @@ export class Login {
         },
       },
       {
-        className: 'input-password',
+        // className: 'input-password',
         key: 'password',
-        templateOptions: {
+        props: {
+          label: 'Password',
           minLength: 5,
           placeholder: 'password',
           required: true,

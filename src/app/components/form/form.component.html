@@ -1,4 +1,4 @@
-<form class="form">
+<form class="form" [formGroup]="formGroup" (ngSubmit)="submit()">
   <formly-form
     [form]="formGroup"
     [model]="formAttributes.model"
@@ -7,10 +7,10 @@
   </formly-form>
   <div *ngIf="formAttributes.buttonText">
     <button
-      class="button-submit btn btn-success w-100"
+      class="bg-green-500 w-24 h-8 mt-4"
       type="submit"
       [disabled]="!formGroup.valid"
-      (click)="submit()"
+      mat-raised-button
     >
       {{ formAttributes.buttonText }}
     </button>

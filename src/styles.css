@@ -1,8 +1,8 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'bootstrap/dist/css/bootstrap.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import '~bootstrap/dist/css/bootstrap.min.css';
 
 .btn {
   margin-top: 1.5rem;
@@ -12,9 +12,9 @@
   cursor: default;
 }
 
-body {
+/* body {
   background-color: #c5e1e2;
-}
+} */
 
 form {
   margin: 5rem;

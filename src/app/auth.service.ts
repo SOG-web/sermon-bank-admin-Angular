@@ -20,7 +20,7 @@ export class AuthService {
     });
   }
 
-  async login(value: any): Promise<any> {
+  async login(value: { email: string; password: string }): Promise<any> {
     return this.fireAuth
       .signInWithEmailAndPassword(value.email, value.password)
       .then((result) => {

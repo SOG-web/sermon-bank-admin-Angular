@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { Message } from './message.component';
 import { SharedModule } from '../../shared/shared.module';
+import { FileValueAccessor } from 'src/app/directives/file-value-accessor';
 
 const routes = [
   {

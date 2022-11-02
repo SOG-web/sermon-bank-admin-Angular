@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { AuthService } from '../../auth.service';
 import { FormAttributes } from '../../models/form-attributes.model';
 import { FormType } from '../../models/forms.enum';
 import { LoginFormModel } from '../../models/login-form.model';
@@ -12,8 +14,13 @@ import { LoginFormModel } from '../../models/login-form.model';
 export class AuthComponent implements OnInit {
   formAttributes: FormAttributes;
   loginFormModel: LoginFormModel;
+  authType: String = 'Login';
 
-  constructor(private title: Title) {}
+  constructor(
+    private title: Title,
+    private authService: AuthService,
+    private route: Router
+  ) {}
 
   ngOnInit() {
     this.title.setTitle('Login');
@@ -26,6 +33,13 @@ export class AuthComponent implements OnInit {
   }
 
   submit(formModel: LoginFormModel) {
-    console.log('Successfully logged in');
+    this.authService
+      .login({
+        email: formModel.email,
+        password: formModel.password,
+      })
+      .then(() => {
+        this.route.navigate(['/']);
+      });
   }
 }
