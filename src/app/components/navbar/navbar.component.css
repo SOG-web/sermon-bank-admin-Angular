@@ -55,8 +55,8 @@
   margin-bottom: 20px;
   text-decoration: none;
 }
-.navbar-text02:active {
-  color: rgba(239, 212, 71, 1);
+.active {
+  color: rgba(239, 212, 71, 1) !important;
 }
 .navbar-text04 {
   color: rgba(255, 255, 255, 1);

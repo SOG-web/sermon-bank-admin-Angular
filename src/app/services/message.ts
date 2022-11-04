@@ -30,11 +30,7 @@ export class Message {
           label: 'Select Minister',
           placeholder: 'minister',
           required: true,
-          options: [
-            { label: 'Option 1', value: '1' },
-            { label: 'Option 2', value: '2' },
-            { label: 'Option 3', value: '3' },
-          ],
+          options: listService.getOptions('ministers'),
         },
         type: 'select',
         validation: {
@@ -74,11 +70,6 @@ export class Message {
             required: 'Please upload a message',
           },
         },
-        // parsers: [
-        //   (_) => {
-        //     console.log(_);
-        //   },
-        // ],
       },
     ];
   }

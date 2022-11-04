@@ -1,44 +1,40 @@
 <div class="navbar-navbar" [ngClass]="rootClassName">
-  <a
-    routerLink="/"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    class="navbar-text"
+  <a [routerLink]="'/'" ariaCurrentWhenActive="page" class="navbar-text"
     ><span>Sermon Bank</span></a
   >
   <div class="navbar-frame1">
     <a
-      routerLink="/message"
-      routerLinkActive="active"
+      [routerLink]="'/message'"
+      [routerLinkActive]="'active'"
       ariaCurrentWhenActive="page"
-      class="navbar-text02"
+      class="navbar-text04"
       >Message</a
     >
     <a
-      routerLink="/category"
-      routerLinkActive="active"
+      [routerLink]="'/category'"
+      [routerLinkActive]="'active'"
       ariaCurrentWhenActive="page"
       class="navbar-text04"
       >Category</a
     >
     <a
-      routerLink="/ministers"
-      routerLinkActive="active"
+      [routerLink]="'/ministers'"
+      [routerLinkActive]="'active'"
       ariaCurrentWhenActive="page"
       class="navbar-text06"
     >
       Ministers
     </a>
-    <a
-      routerLink="/levels"
+    <!-- <a
+      [routerLink]="'/levels'"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
       class="navbar-text09"
       ><span>Levels</span></a
-    >
+    > -->
     <a
-      routerLink="/banner"
-      routerLinkActive="active"
+      [routerLink]="'/banner'"
+      [routerLinkActive]="'active'"
       ariaCurrentWhenActive="page"
       class="navbar-text11"
       ><span>Banner</span></a

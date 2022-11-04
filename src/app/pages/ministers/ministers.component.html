@@ -3,10 +3,29 @@
     heading="Add new Minister"
     rootClassName="header-root-class-name4 mt-4"
   ></app-header>
-  <app-form
-    class="form"
-    [formAttributes]="formAttributes"
-    (submitted)="submit($event)"
-  >
-  </app-form>
+  <div class="grid grid-cols-10">
+    <app-form
+      class="form col-span-8"
+      [formAttributes]="formAttributes"
+      (submitted)="submit($event)"
+    >
+    </app-form>
+    <div class="col-span-2">
+      <p class="text-black font-bold text-center text-lg">List of Minister</p>
+      <div
+        *ngFor="let minister of ministers"
+        class="flex gap-2 items-center mb-4 w-full"
+      >
+        <p class="text-neutral-800 font-bold text-center text-base">
+          {{ minister.name }}
+        </p>
+        <button
+          (click)="onDelete(minister)"
+          class="bg-red-500 w-12 h-8 text-center text-white rounded"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

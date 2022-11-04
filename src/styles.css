@@ -36,3 +36,7 @@ body {
 textarea {
   height: 100px !important;
 }
+
+.active {
+  color: rgba(239, 212, 71, 1);
+}

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { finalize, tap } from 'rxjs';
 import { BannerFormModel } from 'src/app/models/banner-form.model';
 import { FormAttributes } from 'src/app/models/form-attributes.model';
 import { FormType } from 'src/app/models/forms.enum';

@@ -11,22 +11,68 @@ import { APP_INITIALIZER } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AuthService } from './auth.service';
 import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import { FileFieldWrapper } from './components/form/file-field-wrapper.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListService } from './services/list.service';
+import { Navbar } from './components/navbar/navbar.component';
+import { Header } from './components/header/header.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyMaterialModule } from '@ngx-formly/material';
+import { FormlyFieldCountry } from './components/form/country-picker-type.component';
+import { FormlyFieldFile } from './components/form/file-type.component';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { HttpClientModule } from '@angular/common/http';
+import { FileValueAccessor } from './directives/file-value-accessor';
+import { FormComponent } from './components/form/form.component';
+import { Message } from './pages/message/message.component';
+import { Levels } from './pages/levels/levels.component';
+import { Banner } from './pages/banner/banner.component';
+import { Ministers } from './pages/ministers/ministers.component';
+import { AuthComponent } from './pages/auth/auth.component';
+import { Home } from './pages/home/home.component';
+import { Category } from './pages/category/category.component';
+import { CommonModule } from '@angular/common';
+import { UploadService } from './services/upload.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     // FileValidatorDirective,
     FileFieldWrapper,
+    Navbar,
+    Header,
+    FileValueAccessor,
+    FormlyFieldFile,
+    FormlyFieldCountry,
+    Navbar,
+    Header,
+    FormComponent,
+    Message,
+    Levels,
+    Banner,
+    Ministers,
+    AuthComponent,
+    Home,
+    Category,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
-    SharedModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot({
+      extras: { lazyRender: true, resetFieldOnHide: true },
+      types: [
+        { name: 'file', component: FormlyFieldFile },
+        { name: 'country', component: FormlyFieldCountry },
+      ],
+      wrappers: [{ name: 'file', component: FileFieldWrapper }],
+    }),
+    FormlyMaterialModule,
+    MatSelectCountryModule.forRoot('en'),
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
@@ -34,20 +80,7 @@ import { ListService } from './services/list.service';
     NgxMatFileInputModule,
     BrowserAnimationsModule,
   ],
-  providers: [
-    AuthService,
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: resourceProviderFactory,
-    //   deps: [ListService],
-    //   multi: true,
-    // },
-    ListService,
-  ],
+  providers: [AuthService, ListService, UploadService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-// export function resourceProviderFactory(provider: ListService) {
-//   return () => provider.getOptions('category');
-// }

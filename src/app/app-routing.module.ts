@@ -4,52 +4,50 @@ import {
   redirectUnauthorizedTo,
   canActivate,
 } from '@angular/fire/compat/auth-guard';
+import { Levels } from './pages/levels/levels.component';
+import { Banner } from './pages/banner/banner.component';
+import { Message } from './pages/message/message.component';
+import { Category } from './pages/category/category.component';
+import { Home } from './pages/home/home.component';
+import { Ministers } from './pages/ministers/ministers.component';
+import { AuthComponent } from './pages/auth/auth.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['auth']);
 
 const routes: Routes = [
   {
     path: 'levels',
-    loadChildren: () =>
-      import('./pages/levels/levels.module').then((m) => m.LevelsModule),
+    component: Levels,
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: 'banner',
-    loadChildren: () =>
-      import('./pages/banner/banner.module').then((m) => m.BannerModule),
+    component: Banner,
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: 'message',
-    loadChildren: () =>
-      import('./pages/message/message.module').then((m) => m.MessageModule),
+    component: Message,
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: 'category',
-    loadChildren: () =>
-      import('./pages/category/category.module').then((m) => m.CategoryModule),
+    component: Category,
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: '',
-    loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomeModule),
+    component: Home,
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: 'ministers',
-    loadChildren: () =>
-      import('./pages/ministers/ministers.module').then(
-        (m) => m.MinistersModule
-      ),
+    component: Ministers,
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
     path: 'auth',
-    loadChildren: () =>
-      import('./pages/auth/auth.module').then((m) => m.AuthModule),
+    component: AuthComponent,
   },
 ];
 
