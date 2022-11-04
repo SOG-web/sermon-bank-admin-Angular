@@ -28,14 +28,12 @@ export class FormComponent implements OnInit {
       this.formsService
         .getForm(this.formAttributes.formType, this.formAttributes.model)
         .subscribe((form: Form) => {
-          console.log(form.fields);
           this.fields = form.fields;
         });
     }
   }
 
   submit() {
-    console.log(this.formGroup.value);
     this.submitted.emit(this.formAttributes.model);
   }
 }

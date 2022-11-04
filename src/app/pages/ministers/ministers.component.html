@@ -1,62 +1,12 @@
 <div class="ministers-container">
-  <div class="ministers-ministry">
-    <app-header
-      heading="Add new Minister"
-      rootClassName="header-root-class-name4"
-    ></app-header>
-    <app-navbar rootClassName="navbar-root-class-name1"></app-navbar>
-    <div class="ministers-container1">
-      <input
-        type="date"
-        id="title"
-        name="title"
-        required
-        placeholder="title"
-        class="ministers-input input"
-      />
-      <span class="ministers-text">Date of Birth :</span>
-    </div>
-    <div class="ministers-container2">
-      <input
-        type="text"
-        id="country"
-        name="country"
-        required
-        placeholder="country"
-        class="ministers-input1 input"
-      />
-      <span class="ministers-text1">Country :</span>
-    </div>
-    <div class="ministers-container3">
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-        placeholder="name"
-        class="ministers-input2 input"
-      />
-      <span class="ministers-text2">Name :</span>
-    </div>
-    <div class="ministers-container4">
-      <span class="ministers-text3">About :</span>
-      <textarea
-        id="about"
-        name="about"
-        placeholder="about"
-        class="ministers-textarea textarea"
-      ></textarea>
-    </div>
-    <button
-      id="submit"
-      name="submit"
-      type="submit"
-      class="ministers-button button"
-    >
-      <span>
-        <span>Submit</span>
-        <br />
-      </span>
-    </button>
-  </div>
+  <app-header
+    heading="Add new Minister"
+    rootClassName="header-root-class-name4 mt-4"
+  ></app-header>
+  <app-form
+    class="form"
+    [formAttributes]="formAttributes"
+    (submitted)="submit($event)"
+  >
+  </app-form>
 </div>

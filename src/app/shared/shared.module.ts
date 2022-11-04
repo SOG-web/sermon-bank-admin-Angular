@@ -10,6 +10,9 @@ import { FormlyFieldFile } from '../components/form/file-type.component';
 import { FileFieldWrapper } from '../components/form/file-field-wrapper.component';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FileValueAccessor } from '../directives/file-value-accessor';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { HttpClientModule } from '@angular/common/http';
+import { FormlyFieldCountry } from '../components/form/country-picker-type.component';
 
 @NgModule({
   declarations: [
@@ -18,17 +21,23 @@ import { FileValueAccessor } from '../directives/file-value-accessor';
     FormComponent,
     FileValueAccessor,
     FormlyFieldFile,
+    FormlyFieldCountry,
   ],
   imports: [
     ReactiveFormsModule,
     FormlyModule.forRoot({
       extras: { lazyRender: true, resetFieldOnHide: true },
-      types: [{ name: 'file', component: FormlyFieldFile }],
+      types: [
+        { name: 'file', component: FormlyFieldFile },
+        { name: 'country', component: FormlyFieldCountry },
+      ],
       wrappers: [{ name: 'file', component: FileFieldWrapper }],
     }),
     FormlyMaterialModule,
     // FormlyBootstrapModule,
     CommonModule,
+    MatSelectCountryModule.forRoot('en'),
+    HttpClientModule,
   ],
   exports: [
     FormlyModule,
@@ -40,6 +49,8 @@ import { FileValueAccessor } from '../directives/file-value-accessor';
     FormComponent,
     FormlyFieldFile,
     FileValueAccessor,
+    MatSelectCountryModule,
+    HttpClientModule,
   ],
 })
 export class SharedModule {}

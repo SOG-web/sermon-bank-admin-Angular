@@ -1,7 +1,11 @@
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { Observable, of, tap } from 'rxjs';
+import { ListService } from './list.service';
 
 export class Message {
-  public static getMessageFormConfig(): FormlyFieldConfig[] {
+  public static getMessageFormConfig(
+    listService: ListService
+  ): FormlyFieldConfig[] {
     return [
       {
         focus: true,
@@ -11,11 +15,7 @@ export class Message {
           placeholder: 'category',
           required: true,
           multiple: true,
-          options: [
-            { label: 'Option 1', value: '1' },
-            { label: 'Option 2', value: '2' },
-            { label: 'Option 3', value: '3' },
-          ],
+          options: listService.getOptions('category'),
         },
         type: 'select',
         validation: {

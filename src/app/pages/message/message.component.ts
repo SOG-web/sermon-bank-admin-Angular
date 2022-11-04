@@ -23,6 +23,7 @@ export class Message implements OnInit {
       formType: FormType.MESSAGE,
       model: this.messageFormModel,
     };
+    // console.log(this.messageFormModel);
   }
 
   submit(formModel: MessageFormModel) {

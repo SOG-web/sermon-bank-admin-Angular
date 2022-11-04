@@ -1,39 +1,29 @@
 <div class="banner-container">
-  <div class="banner-banner">
-    <app-navbar rootClassName="navbar-root-class-name5"></app-navbar>
-    <app-header
-      heading="New Banner"
-      rootClassName="header-root-class-name3"
-    ></app-header>
-    <span class="banner-text">Enter Url</span>
-    <span class="banner-text1">Select Image</span>
-    <button
-      id="submit"
-      name="submit"
-      type="submit"
-      class="banner-button button"
+  <app-header
+    heading="New Banner"
+    rootClassName="header-root-class-name3 mt-4"
+  ></app-header>
+  <div class="grid grid-cols-10">
+    <app-form
+      class="form col-span-8"
+      [formAttributes]="formAttributes"
+      (submitted)="submit($event)"
     >
-      <span>
-        <span>Submit</span>
-        <br />
-      </span>
-    </button>
+    </app-form>
+    <div class="col-span-2">
+      <p class="text-black font-bold text-center text-lg">List of Banners</p>
+      <div
+        *ngFor="let banner of banners"
+        class="flex gap-2 items-center mb-4 w-full"
+      >
+        <img [src]="banner.image" alt="banner image" class="w-[100px] h-10" />
+        <button
+          (click)="onDelete(banner)"
+          class="bg-red-500 w-12 h-8 text-center text-white rounded"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
   </div>
-  <input
-    type="text"
-    id="url"
-    name="url"
-    required
-    placeholder="Banner image"
-    class="banner-textinput input"
-  />
-  <input
-    type="file"
-    id="image"
-    name="image"
-    accept="image/*"
-    required
-    placeholder="Banner image"
-    class="banner-textinput1 input"
-  />
 </div>

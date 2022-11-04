@@ -1,9 +1,9 @@
-:host { 
-  display: contents; 
+:host {
+  display: contents;
 }
 .navbar-navbar {
-  width: 284px;
-  height: 832px;
+  /* width: 284px;
+  height: 832px; */
   display: flex;
   padding: 56px 32px;
   position: relative;
@@ -143,8 +143,3 @@
   left: 0px;
   position: absolute;
 }
-
-
-
-
-
