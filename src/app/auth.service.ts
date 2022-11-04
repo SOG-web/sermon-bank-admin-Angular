@@ -24,17 +24,9 @@ export class AuthService {
     return this.fireAuth
       .signInWithEmailAndPassword(value.email, value.password)
       .then((result) => {
-        if (result.user?.emailVerified) {
-          this.userLoggedIn = true;
-          console.log('User logged in');
-          return result.user;
-        } else {
-          this.userLoggedIn = false;
-          return {
-            state: 'error',
-            message: 'Please verify your email address',
-          };
-        }
+        this.userLoggedIn = true;
+        console.log('User logged in');
+        return result.user;
       })
       .catch((error) => {
         if (error.code === 'auth/invalid-email') {
