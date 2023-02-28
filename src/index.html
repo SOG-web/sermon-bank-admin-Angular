@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css"
+    />
     <style data-tag="reset-style-sheet">
       html {
         line-height: 1.15;
@@ -123,11 +127,44 @@
       href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       data-tag="font"
     />
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
   <body class="mat-typography">
     <app-root></app-root>
+    <script src="https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js"></script>
+    <script>
+      let events = [];
+
+      rrweb.record({
+        emit(event) {
+          // push event into the events array
+          events.push(event);
+        },
+      });
+
+      // this function will send events to the backend and reset the events array
+      function save() {
+        const body = JSON.stringify({ events });
+        console.log(events);
+        // fetch('http://YOUR_BACKEND_API', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body,
+        // });
+      }
+
+      // save events every 10 seconds
+      setInterval(save, 10 * 1000);
+    </script>
   </body>
 </html>
